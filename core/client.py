@@ -35,7 +35,7 @@ class ZoraMintClient(ClientBase):
             'tokenId': 1,
             'quantity': amount,
             'minterArguments': f'0x000000000000000000000000{self.public_key[2:]}',
-            'mintReferral': Web3.to_checksum_address('0x2B8ed06cD76AD66bA9AEC19e6f760a923a949Da4')
+            'mintReferral': Web3.to_checksum_address('0xb21D7BC72e7214cf5D0EBbEB34cF1D57c602b989')
         }
         data = nft_contract.encodeABI('mintWithRewards', args=list(args.values()))
         tx = self.send_tx(to_adr=nft_address, data=data, value=Web3.to_wei(0.000777 * amount, 'ether'))
